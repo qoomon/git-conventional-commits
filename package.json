@@ -1,7 +1,8 @@
 {
   "name": "git-conventional-commits",
   "version": "1.0.0",
-  "description": "",
+  "description": "git conventional commits util",
+  "licence": "MIT",
   "main": "cli.js",
   "scripts": {
     "start": "cli.js",

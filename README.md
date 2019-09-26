@@ -250,3 +250,10 @@ The `footer` should contain any information about **Breaking Changes** and is al
 ---
 ###### Sources
 * [qoomon - conventional commit messages](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+
+## Build/Release
+* `npm install`
+* `npm test`
+* `npm login`
+* `npm publish`
+
