@@ -5,7 +5,7 @@
 **[Git Commit Convention](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
 
 ### Install
-`npm install git-conventional-commits`
+`npm install --global git-conventional-commits`
 
 ### Commands
 ```
