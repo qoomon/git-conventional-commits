@@ -5,9 +5,6 @@
 **Please find attached [Git Commit Convention](#git-commit-convention)**
 
 ### Install
-ensure you've installed `npm` 
-* **macOS** `brew install node`
-
 `npm install git-conventional-commits`
 
 ### Commands
