@@ -139,7 +139,7 @@ Example `git-conventional-commits.json`
   * Whenever you clone your repository with git hooks you need to enable git hooks once again by execute `git config core.hooksPath .git-hooks`
 
 
-### Release Workflow with `git-conventional-changelog`
+### Release Workflow with `git-conventional-commits`
 1. Determine version by `git-conventional-changelog version`
 1. Update version in project files
     * Commit version bump `git commit -am'build(release): bump project version to <version>'`
