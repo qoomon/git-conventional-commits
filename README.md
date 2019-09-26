@@ -7,15 +7,8 @@
 ### Install
 ensure you've installed `npm` 
 * **macOS** `brew install node`
-  
-**with SSH**:
-ensure you've called `ssh-add ~/.ssh/some_key_rsa`
-`npm install -g git+ssh://git@github.com:qoomon/git-conventional-commits.git`
 
-or
-
-**with HTTPS**:
-`npm install -g git+https://github.com/qoomon/git-conventional-commits.git`
+`npm install git-conventional-commits`
 
 ### Commands
 ```
