@@ -37,7 +37,7 @@ Example `git-conventional-commits.json`
     ],
     "commitScopes": [],
     "releaseTagGlobPattern":  "v[0-9]*.[0-9]*.[0-9]*",
-    "issueRegexPattern": "[A-Z]{3,}-\\d+"
+    "issueRegexPattern": "(^|\\s)#\\d+(\\s|$)"
   },
 
   "changelog" : {
@@ -58,9 +58,9 @@ Example `git-conventional-commits.json`
       "breakingChange": "BREAKING CHANGES"
     },
 
-    "commitUrl": "https://github.com/ACCOUNT/REPO/commit/%commit%",
-    "commitRangeUrl": "https://github.com/ACCOUNT/REPO/compare/%from%...%to%?diff=split",
-    "issueUrl": "https://JIRA_URL/browse/%issue%"
+    "commitUrl": "https://github.com/ACCOUNT/REPOSITORY/commit/%commit%",
+    "commitRangeUrl": "https://github.com/ACCOUNT/REPOSITORY/compare/%from%...%to%?diff=split",
+    "issueUrl": "https://github.com/ACCOUNT/REPOSITORY/issues/%issue%"
   }
 }
 
