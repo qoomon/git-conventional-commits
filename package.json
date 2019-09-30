@@ -21,5 +21,10 @@
   },
   "bin": {
     "git-conventional-commits": "cli.js"
-  }
+  },
+  "files": [
+    "cli.js",
+    "lib/",
+    "git-conventional-commits.default.json"
+  ]
 }
