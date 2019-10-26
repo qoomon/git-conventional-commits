@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/git-conventional-commits)](https://www.npmjs.com/package/git-conventional-commits)
 
-## **=> [Git Commit Convention](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
+## **=> [Git Commit Conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
 
 ### Install
 `npm install --global git-conventional-commits`
