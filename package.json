@@ -5,7 +5,7 @@
   "licence": "MIT",
   "main": "cli.js",
   "scripts": {
-    "start": "cli.js",
+    "start": "./cli.js",
     "test": "jest"
   },
   "repository": "github:qoomon/git-conventional-commits",
