@@ -9,7 +9,9 @@
       "test",
       "build",
       "ops",
-      "docs"
+      "docs",
+      "merge",
+      "revert"
     ],
     "commitScopes": [],
     "releaseTagGlobPattern": "v[0-9]*.[0-9]*.[0-9]*",

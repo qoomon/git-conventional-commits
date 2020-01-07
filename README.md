@@ -33,7 +33,9 @@ Example `git-conventional-commits.json`
       "test",
       "build",
       "ops",
-      "doc"
+      "doc",
+      "merge",
+      "revert"
     ],
     "commitScopes": [],
     "releaseTagGlobPattern":  "v[0-9]*.[0-9]*.[0-9]*",
