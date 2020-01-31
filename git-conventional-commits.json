@@ -9,9 +9,7 @@
       "test",
       "build",
       "ops",
-      "docs",
-      "merge",
-      "revert"
+      "docs"
     ],
     "commitScopes": [],
     "releaseTagGlobPattern": "v[0-9]*.[0-9]*.[0-9]*",
@@ -22,15 +20,13 @@
     "commitTypes": [
       "feat",
       "fix",
-      "perf",
-      "merge"
+      "perf"
     ],
     "commitIgnoreRegexPattern": "^WIP ",
     "headlines": {
       "feat": "Features",
       "fix": "Bug Fixes",
       "perf": "Performance Improvements",
-      "merge": "Merged Branches",
       "breakingChange": "BREAKING CHANGES"
     },
 

@@ -115,15 +115,18 @@ test('commitLog', async () => {
 
   // THEN
   expect(gitCommitLog.length).toBe(2);
+  
   expect(gitCommitLog[0]).toEqual({
     body: '',
     hash: expect.any(String),
-    subject: 'update 2'
-  });
-
+    subject: 'update 3',
+    parents: [expect.any(String)]
+  })
+  
   expect(gitCommitLog[1]).toEqual({
     body: '',
     hash: expect.any(String),
-    subject: 'update 3'
-  })
+    subject: 'update 2',
+    parents: [expect.any(String)]
+  });
 });
