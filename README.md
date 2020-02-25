@@ -1,4 +1,4 @@
-# Git Conventional Changelog Generator 
+# Git Conventional Commits
 
 [![npm](https://img.shields.io/npm/v/git-conventional-commits)](https://www.npmjs.com/package/git-conventional-commits)
 
