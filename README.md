@@ -16,7 +16,7 @@
 ```
 
 ### Usage
-* Create [config file](#config-file) `git-conventinal-commits init`
+* Create [config file](#config-file) `git-conventional-commits init`
 * Adjust config `git-conventional-commits.json` to your needs
 
 #### Config File
