@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "execa": "^2.1.0",
+    "execa": "^4.0.3",
     "yargs": "^15.4.1"
   },
   "devDependencies": {
