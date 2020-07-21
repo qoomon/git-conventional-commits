@@ -12,12 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "yargs": "^14.0.0",
-    "execa": "^2.0.3"
+    "execa": "^2.1.0",
+    "yargs": "^15.4.1"
   },
   "devDependencies": {
-    "jest": "^24.8.0",
-    "tmp-promise": "^2.0.2"
+    "jest": "^26.1.0",
+    "tmp-promise": "^2.1.1"
   },
   "bin": {
     "git-conventional-commits": "cli.js"
