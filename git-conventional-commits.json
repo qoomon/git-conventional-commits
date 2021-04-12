@@ -10,6 +10,7 @@
       "build",
       "ops",
       "docs",
+      "chore",
       "merge",
       "revert"
     ],
