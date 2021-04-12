@@ -12,6 +12,7 @@
 * Adjust config `git-conventional-commits.json` to your needs
 
 #### Commands
+ℹ add help parameter `-h` to commands to list all possible options
 ```
   init [options]                               creates a config file template `git-conventional-commits.json`
   version [options]                            determine version from conventional commits
