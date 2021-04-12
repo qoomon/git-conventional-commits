@@ -130,7 +130,17 @@ Example `git-conventional-commits.json`
   * Add and commit `.git-hooks/commit-msg` to repository
   * ⚠️ Whenever you clone your repository with git hooks you need to enable git hooks once again
     * `git config core.hooksPath .git-hooks`
-
+  
+#### Global hook  
+* To create a global commit-msg hook you can create an `init template`
+  * Enable git templates:
+     `git config --global init.templatedir '~/.git-templates'`
+     This tells git to copy everything in  `~/.git-templates`  to your per-project  `.git/`  directory when you run  `git init` or `git clone`
+  * Create a directory to hold the global hooks:
+     `mkdir -p ~/.git-templates/hooks`
+     `touch ~/.git-templates/hooks/commit-msg && chmod +x ~/.git-templates/hooks/commit-msg`
+  * Write your hooks in ~/.git-templates/hooks
+* ⚠️ This will only work for new initialized or cloned projects, not for your existing projects  
 
 ### Release Workflow with `git-conventional-commits`
 1. Determine version by `git-conventional-commits version`
