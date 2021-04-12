@@ -127,7 +127,7 @@ Example `git-conventional-commits.json`
       git-conventional-commits commit-msg-hook "$1"
       ```
   * Add and commit `.git-hooks/commit-msg` to repository
-  * Whenever you clone your repository with git hooks you need to enable git hooks once again by execute `git config core.hooksPath .git-hooks`
+  * ⚠️ Whenever you clone your repository with git hooks you need to enable git hooks once again by execute `git config core.hooksPath .git-hooks`
 
 
 ### Release Workflow with `git-conventional-commits`
