@@ -33,7 +33,7 @@ Example `git-conventional-commits.json`
       "test",
       "build",
       "ops",
-      "doc",
+      "docs",
       "merge"
     ],
     "commitScopes": [],
