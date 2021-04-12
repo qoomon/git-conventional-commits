@@ -7,17 +7,17 @@
 ### Install
 `npm install --global git-conventional-commits`
 
-### Commands
+### Usage
+* Create [config file](#config-file) `git-conventional-commits init`
+* Adjust config `git-conventional-commits.json` to your needs
+
+#### Commands
 ```
   init [options]                               creates a config file template `git-conventional-commits.json`
   version [options]                            determine version from conventional commits
   changelog [options]                          generate change log from conventional commits
   commit-msg-hook [options] <commit-msg-file>  check for conventional commit message format
 ```
-
-### Usage
-* Create [config file](#config-file) `git-conventional-commits init`
-* Adjust config `git-conventional-commits.json` to your needs
 
 #### Config File
 Example `git-conventional-commits.json`
