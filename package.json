@@ -16,7 +16,7 @@
     "yargs": "^16.1.1"
   },
   "devDependencies": {
-    "jest": "^26.1.0",
+    "jest": "^27.0.5",
     "tmp-promise": "^3.0.2"
   },
   "bin": {
