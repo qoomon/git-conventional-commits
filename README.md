@@ -43,6 +43,7 @@ Example `git-conventional-commits.json`
   },
 
   "changelog" : {
+    "date": "header",
     "commitTypes": [
       "feat",
       "fix",
@@ -84,6 +85,10 @@ Example `git-conventional-commits.json`
     * e.g. Jira issue pattern `[A-Z]{3,}-\\d+`
  
 * `changelog` 
+  * `data` format the date in the change, `header` will format the date in teh header
+    and `quote` will formate the date below the version header in a `quote` block.
+    * default: `header`
+    * Options: `header`, `quote`
   * `commitTypes` filter commits by type
     * a subset of `convention.commitTypes` plus
       * `merge` commits
