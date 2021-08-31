@@ -4,6 +4,9 @@
 
 **ℹ Have a look at [Git Commit Conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
 
+### Changelog
+see [CHANGELOG.md](CHANGELOG.md)
+
 ### Install
 `npm install --global git-conventional-commits`
 
