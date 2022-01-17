@@ -1,4 +1,5 @@
-# Git Conventional Commits
+# Git Conventional Commits [![Sparkline](https://stars.medv.io/qoomon/git-conventional-commits.svg)](https://stars.medv.io/qoomon/git-conventional-commits)
+
 
 [![npm](https://img.shields.io/npm/v/git-conventional-commits)](https://www.npmjs.com/package/git-conventional-commits)
 
