@@ -26,6 +26,7 @@
       "perf",
       "merge"
     ],
+    "includeInvalidCommits": true,
     "commitIgnoreRegexPattern": "^WIP ",
     "headlines": {
       "feat": "Features",

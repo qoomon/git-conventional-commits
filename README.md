@@ -54,6 +54,7 @@ Example `git-conventional-commits.json`
       "merge",
       "?"
     ],
+    "includeInvalidCommits": true,
     "commitScopes": [],
     "commitIgnoreRegexPattern": "^WIP ",
     "headlines": {
@@ -98,8 +99,11 @@ Example `git-conventional-commits.json`
     * a subset of `convention.commitScopes`
     * if not set or empty commit scope filter is disabled
     * e.g. `["ui"]`
+  * `includeInvalidCommits` include commits without valid type
+    * if set to false all commits with undefined `commitTypes` will be removed from changelog 
+    * default `true`
   * `commitIgnoreRegexPattern` filter commits by commit subject regex
-    * default `^WIP `  
+  * default `^WIP `  
   * `headlines` a map of headline identifier and actual headline
     * a subset of `changelog.commitTypes` plus
       * `breakingChange` Breaking Changes Section
