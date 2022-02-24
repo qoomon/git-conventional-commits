@@ -51,8 +51,7 @@ Example `git-conventional-commits.json`
       "feat",
       "fix",
       "perf",
-      "merge",
-      "?"
+      "merge"
     ],
     "commitScopes": [],
     "commitIgnoreRegexPattern": "^WIP ",
@@ -91,7 +90,6 @@ Example `git-conventional-commits.json`
   * `commitTypes` filter commits by type
     * a subset of `convention.commitTypes` plus
       * `merge` commits
-      * `?` commits with unexpected message format
     * if not set or empty commit type filter is disabled
     * e.g. `["feat", "fix", "merge" , "?"]`
   * `commitScopes` filter commits by scopes
