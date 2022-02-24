@@ -92,7 +92,7 @@ Example `git-conventional-commits.json`
     * a subset of `convention.commitTypes` plus
       * `merge` commits
     * if not set or empty commit type filter is disabled
-    * e.g. `["feat", "fix", "merge" , "?"]`
+    * e.g. `["feat", "fix", "merge"]`
   * `commitScopes` filter commits by scopes
     * a subset of `convention.commitScopes`
     * if not set or empty commit scope filter is disabled
