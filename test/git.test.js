@@ -1,6 +1,6 @@
 const fs = require('fs');
 const temp = require('tmp-promise');
-const execa = require('execa');
+const execAsync = require('../lib/execAsync');
 
 const {
   lastTag,
@@ -11,7 +11,7 @@ const {
 beforeEach(async () => {
   const gitDir = await temp.dir();
   process.chdir(gitDir.path);
-  await execa('git', ['init']);
+  await execAsync('git init');
 });
 
 
@@ -21,24 +21,24 @@ test('getLastTag', async () => {
 
   // add commit 0
   fs.writeFileSync('text.txt', 'Lorem ipsum 0');
-  await execa('git', ['add', 'text.txt']);
-  await execa('git', ['commit', '-a', '-m', 'init']);
+  await execAsync('git add text.txt');
+  await execAsync('git commit -a -m init');
 
   // add commit 1
   fs.writeFileSync('text.txt', 'Lorem ipsum 1');
-  await execa('git', ['commit', '-a', '-m', 'update 1']);
+  await execAsync('git commit -a -m "update 1"');
 
   // add tag 1
   const givenVersionTag1 = 'v1.0.0';
-  await execa('git', ['tag', '-a', '-m', givenVersionTag1, givenVersionTag1]);
+  await execAsync(`git tag -a -m ${givenVersionTag1} ${givenVersionTag1}`);
 
   // add commit 2
   fs.writeFileSync('text.txt', 'Lorem ipsum 2');
-  await execa('git', ['commit', '-a', '-m', 'update 2']);
+  await execAsync('git commit -a -m "update 2"');
 
   // add tag 2
   const givenVersionTag2 = 'v2.0.0';
-  await execa('git', ['tag', '-a', '-m', givenVersionTag2, givenVersionTag2]);
+  await execAsync(`git tag -a -m ${givenVersionTag2} ${givenVersionTag2}`);
 
 
   // WHEN
@@ -55,24 +55,24 @@ test('getLastTag - skipTagOnRev=false', async () => {
 
   // add commit 0
   fs.writeFileSync('text.txt', 'Lorem ipsum 0');
-  await execa('git', ['add', 'text.txt']);
-  await execa('git', ['commit', '-a', '-m', 'init']);
+  await execAsync('git add text.txt');
+  await execAsync('git commit -a -m init');
 
   // add commit 1
   fs.writeFileSync('text.txt', 'Lorem ipsum 1');
-  await execa('git', ['commit', '-a', '-m', 'update 1']);
+  await execAsync('git commit -a -m "update 1"');
 
   // add tag 1
   const givenVersionTag1 = 'v1.0.0';
-  await execa('git', ['tag', '-a', '-m', givenVersionTag1, givenVersionTag1]);
+  await execAsync(`git tag -a -m ${givenVersionTag1} ${givenVersionTag1}`);
 
   // add commit 2
   fs.writeFileSync('text.txt', 'Lorem ipsum 2');
-  await execa('git', ['commit', '-a', '-m', 'update 2']);
+  await execAsync('git commit -a -m "update 2"');
 
   // add tag 2
   const givenVersionTag2 = 'v2.0.0';
-  await execa('git', ['tag', '-a', '-m', givenVersionTag2, givenVersionTag2]);
+  await execAsync(`git tag -a -m ${givenVersionTag2} ${givenVersionTag2}`);
 
 
   // WHEN
@@ -89,24 +89,24 @@ test('commitLog', async () => {
 
   // add commit 0
   fs.writeFileSync('text.txt', 'Lorem ipsum 0');
-  await execa('git', ['add', 'text.txt']);
-  await execa('git', ['commit', '-a', '-m', 'init']);
+  await execAsync('git add text.txt');
+  await execAsync('git commit -a -m init');
 
   // add commit 1
   fs.writeFileSync('text.txt', 'Lorem ipsum 1');
-  await execa('git', ['commit', '-a', '-m', 'update 1']);
+  await execAsync('git commit -a -m "update 1"');
 
   // add tag 1
   const givenVersionTag1 = 'v1.0.0';
-  await execa('git', ['tag', '-a', '-m', givenVersionTag1, givenVersionTag1]);
+  await execAsync(`git tag -a -m ${givenVersionTag1} ${givenVersionTag1}`);
 
   // add commit 2
   fs.writeFileSync('text.txt', 'Lorem ipsum 2');
-  await execa('git', ['commit', '-a', '-m', 'update 2']);
+  await execAsync('git commit -a -m "update 2"');
 
   // add commit 3
   fs.writeFileSync('text.txt', 'Lorem ipsum 3');
-  await execa('git', ['commit', '-a', '-m', 'update 3']);
+  await execAsync('git commit -a -m "update 3"');
 
 
   // WHEN
