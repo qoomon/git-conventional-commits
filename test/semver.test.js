@@ -44,3 +44,13 @@ createApplyChangesTest("1.0.0", "1.0.0", "2.0.0");
 createApplyChangesTest("1.0.0", "0.1.1", "1.1.0");
 createApplyChangesTest("1.0.0", "1.1.0", "2.0.0");
 createApplyChangesTest("1.0.0", "1.0.1", "2.0.0");
+
+// pure changes (either major, minor or patch) to development version
+createApplyChangesTest("0.1.0", "0.0.1", "0.1.1");
+createApplyChangesTest("0.1.0", "0.1.0", "0.2.0");
+createApplyChangesTest("0.1.0", "1.0.0", "0.2.0");
+
+// mixed changes (at least two of major, minor or patch) to development version
+createApplyChangesTest("0.1.0", "0.1.1", "0.2.0");
+createApplyChangesTest("0.1.0", "1.1.0", "0.2.0");
+createApplyChangesTest("0.1.0", "1.0.1", "0.2.0");
