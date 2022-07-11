@@ -2,7 +2,7 @@
   "name": "git-conventional-commits",
   "version": "1.2.2",
   "description": "git conventional commits util",
-  "licence": "MIT",
+  "licence": "GPLv3",
   "main": "cli.js",
   "scripts": {
     "start": "./cli.js",
