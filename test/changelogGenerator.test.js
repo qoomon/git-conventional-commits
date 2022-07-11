@@ -69,3 +69,26 @@ test("commandChangelog - ignored commit", async () => {
   // THEN
   expect(changelogString).toMatch(/no relevant changes/);
 });
+
+test("commandChangelog - included because breaking", async () => {
+  // GIVEN
+  const commitType = "refactor";
+  const commitMessage = "make all private fields lowercase";
+  const commitSubject = `${commitType}: ${commitMessage}`;
+
+  const commitBodyType = "BREAKING CHANGES";
+  const commitBodyMessage =
+    "configuration field foo is renamed to bar, update your configuration file";
+  const commitBody = `${commitBodyType}: ${commitBodyMessage}`;
+
+  // WHEN
+  const changelogString = await createSimpleChangelog(
+    commitSubject,
+    commitBody
+  );
+
+  // THEN
+  expect(changelogString).toMatch(
+    new RegExp(`BREAKING CHANGES\\s+\\*\\s+${commitBodyMessage}`, "g")
+  );
+});
