@@ -1,3 +1,9 @@
+## **1.3.0** <sub><sup>2022-07-14 ([e7e8c4f...06d3556](https://github.com/qoomon/git-conventional-commits/compare/e7e8c4f...06d3556?diff=split))</sup></sub>
+
+### Bug Fixes
+*  always include breaking changes in changelog \(\#96\) ([d43723d](https://github.com/qoomon/git-conventional-commits/commit/d43723d))
+
+
 ## **1.2.3** <sub><sup>2022-07-11 ([e2aa89a...b45ae70](https://github.com/qoomon/git-conventional-commits/compare/e2aa89a...b45ae70?diff=split))</sup></sub>
 
 ### Bug Fixes
