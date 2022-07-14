@@ -10,7 +10,6 @@
   },
   "repository": "github:qoomon/git-conventional-commits",
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "yargs": "^17.3.1"
   },
