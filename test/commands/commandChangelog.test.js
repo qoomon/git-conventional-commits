@@ -1,14 +1,19 @@
 const fs = require("fs");
 const path = require("path");
 const temp = require("tmp-promise");
-const execAsync = require("../lib/execAsync");
+const execAsync = require("../../lib/execAsync");
 
-const commandChangelog = require("../lib/commands/commandChangelog");
+const commandChangelog = require("../../lib/commands/commandChangelog");
+
 
 beforeEach(async () => {
-  const gitDir = await temp.dir();
-  process.chdir(gitDir.path);
+  const tempDirectory = await temp.dir();
+  process.chdir(tempDirectory.path);
+
   await execAsync("git init");
+
+  const config = {}
+  fs.writeFileSync("git-conventional-commits.json", JSON.stringify(config), 'utf8');
 });
 
 const createSimpleChangelog = async (commitSubject, commitBody) => {
@@ -30,12 +35,11 @@ const createSimpleChangelog = async (commitSubject, commitBody) => {
   if (commitBody) {
     gitCmd += ` -m "${commitBody}"`;
   }
-
   await execAsync(gitCmd);
 
   // WHEN
   await commandChangelog.handler({
-    config: path.resolve(__dirname, "../git-conventional-commits.default.json"),
+    config: "./git-conventional-commits.json",
     file: changelogFile,
   });
 

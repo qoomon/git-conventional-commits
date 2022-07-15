@@ -1,10 +1,6 @@
 const Config = require('../lib/commands/config');
 const CommitConvention = require('../lib/gitCommitConvention');
 
-// this.parseCommit = parseCommit;
-// this.commitLog = getCommitLog;
-// this.version = getVersion;
-
 test('parseCommit', async () => {
 
   // GIVEN
@@ -24,10 +20,11 @@ test('parseCommit', async () => {
   // THEN
   expect(conventionalCommit).toEqual({
     hash: commit.hash,
+    subject: commit.subject,
+    body: commit.body,
     type: 'feat',
     scope: 'ui',
-    subject: 'new shit',
-    body: commit.body,
+    description: 'new shit',
     breakingChanges: [],
     relatedIssues: []
   })
@@ -52,10 +49,11 @@ test('parseCommit - breaking changes - description', async () => {
   // THEN
   expect(conventionalCommit).toEqual({
     hash: commit.hash,
+    subject: commit.subject,
+    body: commit.body,
     type: 'feat',
     scope: undefined,
-    subject: 'Ditch support of windows XP',
-    body: commit.body,
+    description: 'Ditch support of windows XP',
     breakingChanges: ["Ditch support of windows XP"],
     relatedIssues: []
   })
@@ -80,10 +78,11 @@ test('parseCommit - breaking changes - body', async () => {
   // THEN
   expect(conventionalCommit).toEqual({
     hash: commit.hash,
+    subject: commit.subject,
+    body: commit.body,
     type: 'feat',
     scope: undefined,
-    subject: 'new shit',
-    body: commit.body,
+    description: 'new shit',
     breakingChanges: ["Ditch support of windows XP"],
     relatedIssues: []
   })
@@ -109,10 +108,11 @@ test('parseCommit - issue reference', async () => {
   // THEN
   expect(conventionalCommit).toEqual({
     hash: commit.hash,
+    subject: commit.subject,
+    body: commit.body,
     type: 'feat',
     scope: undefined,
-    subject: 'new shit',
-    body: commit.body,
+    description: 'new shit',
     breakingChanges: [],
     relatedIssues: ['PROJECT-123']
   })

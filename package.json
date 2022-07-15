@@ -1,6 +1,6 @@
 {
   "name": "git-conventional-commits",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "git conventional commits util",
   "licence": "GPLv3",
   "main": "cli.js",
