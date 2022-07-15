@@ -1,3 +1,15 @@
+## **1.4.2** <sub><sup>2022-07-15 ([6d20004...19d2d70](https://github.com/qoomon/git-conventional-commits/compare/6d20004...19d2d70?diff=split))</sup></sub>
+
+### Bug Fixes
+*  I messed up a little, so this is a working version again ([19d2d70](https://github.com/qoomon/git-conventional-commits/commit/19d2d70))
+
+
+## **1.4.0** <sub><sup>2022-07-15 ([8c71120...31b9fa7](https://github.com/qoomon/git-conventional-commits/compare/8c71120...31b9fa7?diff=split))</sup></sub>
+
+### Features
+*  support breaking change syntax in commit subject ([651a6b3](https://github.com/qoomon/git-conventional-commits/commit/651a6b3))
+
+
 ## **1.3.0** <sub><sup>2022-07-14 ([e7e8c4f...06d3556](https://github.com/qoomon/git-conventional-commits/compare/e7e8c4f...06d3556?diff=split))</sup></sub>
 
 ### Bug Fixes
