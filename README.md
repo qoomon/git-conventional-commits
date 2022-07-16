@@ -142,7 +142,7 @@ Example `git-conventional-commits.json`
 1. Update version in project files
     * Commit version bump `git commit -am'build(release): bump project version to <version>'`
 1. Generate change log by `git-conventional-commits changelog --release  <version> --file 'CHANGELOG.md'`
-    * Commit change log `git commit -am'doc(release): create <version> change log entry'`
+    * Commit change log `git commit -am'docs(release): create <version> change log entry'`
 1. Tag commit with version `git tag -a -m'build(release): <version>' '<version-prefix><version>'`
 1. Push all changes `git push`
 1. Build and upload artifacts
