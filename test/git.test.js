@@ -40,7 +40,7 @@ test('getLastTag', async () => {
 
 
     // WHEN
-    let lastVersionTag = await Git.getLastTag('v*');
+    let lastVersionTag = await Git.getLastTag({matchPattern: 'v*'});
 
 
     // THEN
@@ -74,7 +74,7 @@ test('getLastTag - skipTagOnRev=false', async () => {
 
 
     // WHEN
-    let lastVersionTag = await Git.getLastTag('v*', 'HEAD', false);
+    let lastVersionTag = await Git.getLastTag({matchPattern: 'v*'});
 
 
     // THEN
