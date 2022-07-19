@@ -1,3 +1,13 @@
+## **2.0.0** <sub><sup>2022-07-19 ([752f806...ed7cb3b](https://github.com/qoomon/git-conventional-commits/compare/752f806...ed7cb3b?diff=split))</sup></sub>
+
+### Features
+*  ignore pre-release version tags e.g. v1.2.3-SNAPSHOT or v1.2.3-rc1 ([df7be15](https://github.com/qoomon/git-conventional-commits/commit/df7be15))
+*  do not recalculate version, if version tag points on commit anchor ([8cd6c74](https://github.com/qoomon/git-conventional-commits/commit/8cd6c74))
+
+##### `changelog`
+*  release date will be taken from commit date ([ed7cb3b](https://github.com/qoomon/git-conventional-commits/commit/ed7cb3b))
+
+
 ## **1.4.2** <sub><sup>2022-07-15 ([6d20004...19d2d70](https://github.com/qoomon/git-conventional-commits/compare/6d20004...19d2d70?diff=split))</sup></sub>
 
 ### Bug Fixes
