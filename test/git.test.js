@@ -2,10 +2,8 @@ const fs = require('fs');
 const temp = require('tmp-promise');
 const execAsync = require('../lib/execAsync');
 
-const {
-    lastTag,
-    commitLog
-} = require('../lib/git');
+
+const Git = require('../lib/git');
 
 
 beforeEach(async () => {
@@ -42,11 +40,11 @@ test('getLastTag', async () => {
 
 
     // WHEN
-    let lastVersionTag = await lastTag('v*');
+    let lastVersionTag = await Git.getLastTag('v*');
 
 
     // THEN
-    expect(lastVersionTag).toBe(givenVersionTag1)
+    expect(lastVersionTag).toBe(givenVersionTag2)
 });
 
 test('getLastTag - skipTagOnRev=false', async () => {
@@ -76,7 +74,7 @@ test('getLastTag - skipTagOnRev=false', async () => {
 
 
     // WHEN
-    let lastVersionTag = await lastTag('v*', 'HEAD', false);
+    let lastVersionTag = await Git.getLastTag('v*', 'HEAD', false);
 
 
     // THEN
@@ -110,7 +108,7 @@ test('commitLog', async () => {
 
 
     // WHEN
-    let gitCommitLog = await commitLog(givenVersionTag1);
+    let gitCommitLog = await Git.getCommitLog(givenVersionTag1);
 
 
     // THEN
