@@ -1,0 +1,6 @@
+- id: conventional-commits
+  name: conventional-commits
+  description: "Util to generate Semantic Version and Markdown changelog and validate commit message"
+  entry: git-conventional-commits commit-msg-hook
+  stages: [commit-msg]
+  language: node
