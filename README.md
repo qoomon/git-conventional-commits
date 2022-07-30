@@ -131,15 +131,15 @@ The hook can be created either manually or using the [pre-commit framework](http
         - id: conventional-commits
     ```
 
-  Please replace the placeholder `<revision>` with the desired revision from this repository.
+    Please replace the placeholder `<revision>` with the desired revision from this repository.
 1. Install the `pre-commit` framework with: 
-  ```
-  pip install pre-commit
-  ```
+    ```
+    pip install pre-commit
+    ```
 1. Install the commit-msg hook: 
-  ```
-  pre-commit install -t commit-msg
-  ```
+    ```
+    pre-commit install -t commit-msg
+    ```
 
 #### Setup manually
 * Setup Commit Message Hook to 
