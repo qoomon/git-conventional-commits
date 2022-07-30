@@ -4,3 +4,4 @@
   entry: git-conventional-commits commit-msg-hook
   stages: [commit-msg]
   language: node
+  
