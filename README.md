@@ -117,6 +117,31 @@ Example `git-conventional-commits.json`
  
 
 ### Automatically Validate Commit Message Convention before Commit
+
+To automatically validate commit messages, a git hook can be used in the `commit-msg` stage. 
+The hook can be created either manually or using the [pre-commit framework](https://pre-commit.com/).
+
+#### Setup with the pre-commit framework
+1. Create a file `.pre-commit-config.yaml` in the root directory of your repository with the following content: 
+    ```
+    repos:
+    - repo: https://github.com/qoomon/git-conventional-commits
+      rev: <revision>
+      hooks:
+        - id: conventional-commits
+    ```
+
+  Please replace the placeholder `<revision>` with the desired revision from this repository.
+1. Install the `pre-commit` framework with: 
+  ```
+  pip install pre-commit
+  ```
+1. Install the commit-msg hook: 
+  ```
+  pre-commit install -t commit-msg
+  ```
+
+#### Setup manually
 * Setup Commit Message Hook to 
   * Navigate to your repository directory `cd <repository-path>`
   * Create git hook directory `mkdir .git-hooks`
