@@ -1,3 +1,9 @@
+## **2.1.0** <sub><sup>2022-07-30 ([0e01b77...2ef8c09](https://github.com/qoomon/git-conventional-commits/compare/0e01b77...2ef8c09?diff=split))</sup></sub>
+
+### Features
+*  add support for the pre-commit framework (#102) ([0e01b77](https://github.com/qoomon/git-conventional-commits/commit/0e01b77))
+
+
 ## **2.0.0** <sub><sup>2022-07-19 ([752f806...ed7cb3b](https://github.com/qoomon/git-conventional-commits/compare/752f806...ed7cb3b?diff=split))</sup></sub>
 
 ### Features
