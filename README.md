@@ -122,24 +122,16 @@ To automatically validate commit messages, a git hook can be used in the `commit
 The hook can be created either manually or using the [pre-commit framework](https://pre-commit.com/).
 
 #### Setup with the pre-commit framework
-1. Create a file `.pre-commit-config.yaml` in the root directory of your repository with the following content: 
-    ```
+* Create `.pre-commit-config.yaml` file in the root directory of your repository with following content. 
+    ```yaml
     repos:
     - repo: https://github.com/qoomon/git-conventional-commits
-      rev: <revision>
+      rev: <revision e.g. v2.1.0>
       hooks:
         - id: conventional-commits
     ```
-
-    Please replace the placeholder `<revision>` with the desired revision from this repository.
-1. Install the `pre-commit` framework with: 
-    ```
-    pip install pre-commit
-    ```
-1. Install the commit-msg hook: 
-    ```
-    pre-commit install -t commit-msg
-    ```
+* Install the `pre-commit` framework `pip install pre-commit`
+* Install the commit-msg hook `pre-commit install -t commit-msg`
 
 #### Setup manually
 * Setup Commit Message Hook to 
@@ -149,7 +141,7 @@ The hook can be created either manually or using the [pre-commit framework](http
   * Create commit message hook script and make it executable
     * `touch .git-hooks/commit-msg && chmod +x .git-hooks/commit-msg`
     * Open `.git-hooks/commit-msg` with your favorite editor and paste following script
-      ```
+      ```shell
       #!/bin/sh
 
       # fix for windows systems
@@ -163,14 +155,14 @@ The hook can be created either manually or using the [pre-commit framework](http
 
 
 ### Release Workflow with `git-conventional-commits`
-1. Determine version by `git-conventional-commits version`
-1. Update version in project files
-    * Commit version bump `git commit -am'build(release): bump project version to <version>'`
-1. Generate change log by `git-conventional-commits changelog --release  <version> --file 'CHANGELOG.md'`
-    * Commit change log `git commit -am'docs(release): create <version> change log entry'`
-1. Tag commit with version `git tag -a -m'build(release): <version>' '<version-prefix><version>'`
-1. Push all changes `git push`
-1. Build and upload artifacts
+* Determine version by `git-conventional-commits version`
+* Update version in project files
+  * Commit version bump `git commit -am'build(release): bump project version to <version>'`
+* Generate change log by `git-conventional-commits changelog --release  <version> --file 'CHANGELOG.md'`
+  * Commit change log `git commit -am'docs(release): create <version> change log entry'`
+* Tag commit with version `git tag -a -m'build(release): <version>' '<version-prefix><version>'`
+* Push all changes `git push`
+* Build and upload artifacts
 
 ---
 
