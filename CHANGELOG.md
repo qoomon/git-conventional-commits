@@ -1,3 +1,9 @@
+## **2.1.1** <sub><sup>2022-08-17 ([b8d8a18...940f809](https://github.com/qoomon/git-conventional-commits/compare/b8d8a18...940f809?diff=split))</sup></sub>
+
+### Bug Fixes
+*  handle empty repository and no release tag ([940f809](https://github.com/qoomon/git-conventional-commits/commit/940f809))
+
+
 ## **2.1.0** <sub><sup>2022-07-30 ([0e01b77...2ef8c09](https://github.com/qoomon/git-conventional-commits/compare/0e01b77...2ef8c09?diff=split))</sup></sub>
 
 ### Features
