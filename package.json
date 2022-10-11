@@ -1,6 +1,6 @@
 {
   "name": "git-conventional-commits",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "git conventional commits util",
   "licence": "GPLv3",
   "main": "cli.js",
@@ -8,7 +8,7 @@
     "start": "./cli.js",
     "test": "jest"
   },
-  "repository": "github:qoomon/git-conventional-commits",
+  "repository": "github:jdfalk/git-conventional-commits",
   "author": "",
   "dependencies": {
     "yargs": "^17.3.1"
