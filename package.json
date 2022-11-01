@@ -8,7 +8,7 @@
     "start": "./cli.js",
     "test": "jest"
   },
-  "repository": "github:jdfalk/git-conventional-commits",
+  "repository": "github:qoomon/git-conventional-commits",
   "author": "",
   "dependencies": {
     "yargs": "^17.3.1"
