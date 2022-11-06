@@ -11,14 +11,10 @@
 *  add support for bitbucket merge messages ([d0b5b6b](https://github.com/qoomon/git-conventional-commits/commit/d0b5b6b))
 
 
-### Bug Fixes
-*  fix #107 ([b7a3e41](https://github.com/qoomon/git-conventional-commits/commit/b7a3e41))
-
-
 ## **2.1.2** <sub><sup>2022-09-20 ([9e026c5...68a02b6](https://github.com/qoomon/git-conventional-commits/compare/9e026c5...68a02b6?diff=split))</sup></sub>
 
 ### Bug Fixes
-*  fix #107 ([b7a3e41](https://github.com/qoomon/git-conventional-commits/commit/b7a3e41))
+*  fix [#107](https://github.com/qoomon/git-conventional-commits/issues/107) ([b7a3e41](https://github.com/qoomon/git-conventional-commits/commit/b7a3e41))
 
 
 ## **2.1.1** <sub><sup>2022-08-17 ([b8d8a18...940f809](https://github.com/qoomon/git-conventional-commits/compare/b8d8a18...940f809?diff=split))</sup></sub>
