@@ -60,7 +60,7 @@ Example `git-conventional-commits.json`
       "feat": "Features",
       "fix": "Bug Fixes",
       "perf": "Performance Improvements",
-      "merge": "Merged Branches",
+      "merge": "Merges",
       "breakingChange": "BREAKING CHANGES"
     },
 
@@ -105,7 +105,7 @@ Example `git-conventional-commits.json`
     * a subset of `changelog.commitTypes` plus
       * `breakingChange` Breaking Changes Section
     * e.g. `{ "feat": "Features", "fix": "Bug Fixes", "breakingChange": "BREAKING CHANGES"}`  
-    * default `{ "feat": "Features", "fix": "Bug Fixes", "merge": "Merged Branches", "breakingChange": "BREAKING CHANGES"}`
+    * default `{ "feat": "Features", "fix": "Bug Fixes", "merge": "Merges", "breakingChange": "BREAKING CHANGES"}`
   * `commitUrl` an URL template for generating markdown links to repository commits
     * `%commit%` commit hash placeholder
     * eg `https://github.com/qoomon/git-conventional-commits/commit/%commit%`

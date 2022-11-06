@@ -32,7 +32,7 @@
       "feat": "Features",
       "fix": "Bug Fixes",
       "perf": "Performance Improvements",
-      "merge": "Merged Branches",
+      "merge": "Merges",
       "breakingChange": "BREAKING CHANGES"
     },
 
