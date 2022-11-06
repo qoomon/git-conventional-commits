@@ -1,3 +1,10 @@
+## **2.3.0** <sub><sup>2022-11-06 ([d7e4124...15a031e](https://github.com/qoomon/git-conventional-commits/compare/d7e4124...15a031e?diff=split))</sup></sub>
+
+### Features
+*  change default merge headline to just 'Merges' ([d7e4124](https://github.com/qoomon/git-conventional-commits/commit/d7e4124))
+*  create inline Markdown links for issue references ([15a031e](https://github.com/qoomon/git-conventional-commits/commit/15a031e))
+
+
 ## **2.2.0** <sub><sup>2022-11-06 ([9e026c5...d0b5b6b](https://github.com/qoomon/git-conventional-commits/compare/9e026c5...d0b5b6b?diff=split))</sup></sub>
 
 ### Features

@@ -42,8 +42,7 @@ Example `git-conventional-commits.json`
       "merge"
     ],
     "commitScopes": [],
-    "releaseTagGlobPattern":  "v[0-9]*.[0-9]*.[0-9]*",
-    "issueRegexPattern": "(^|\\s)#\\d+(\\s|$)"
+    "releaseTagGlobPattern":  "v[0-9]*.[0-9]*.[0-9]*"
   },
 
   "changelog" : {
@@ -66,6 +65,7 @@ Example `git-conventional-commits.json`
 
     "commitUrl": "https://github.com/ACCOUNT/REPOSITORY/commit/%commit%",
     "commitRangeUrl": "https://github.com/ACCOUNT/REPOSITORY/compare/%from%...%to%?diff=split",
+    "issueRegexPattern": "#\\d+",
     "issueUrl": "https://github.com/ACCOUNT/REPOSITORY/issues/%issue%"
   }
 }
