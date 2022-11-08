@@ -11,6 +11,7 @@
   "repository": "github:qoomon/git-conventional-commits",
   "author": "",
   "dependencies": {
+    "ini": "^3.0.1",
     "yargs": "^17.6.2"
   },
   "devDependencies": {
