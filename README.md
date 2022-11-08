@@ -15,6 +15,17 @@ see [CHANGELOG.md](CHANGELOG.md)
 * Create [config file](#config-file) `git-conventional-commits init`
 * Adjust config `git-conventional-commits.json` to your needs
 
+#### Global Setup
+* `mkdir -p .git-templates/hooks/`
+* create file `.git-templates/hooks/commit-msg` with following content:
+```
+#!/bin/sh
+git-conventional-commits commit-msg-hook "$1"
+```
+* `git config --global init.templatedir '~/.git-templates'`
+* re-use `git init` in existing repositories
+
+
 #### Commands
 ℹ add help parameter `-h` to commands to list all possible options
 ```
