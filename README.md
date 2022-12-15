@@ -41,7 +41,7 @@ convention:
   - docs
   - merge
   commitScopes: []
-  releaseTagGlobPattern: v[0-9]+.[0-9]+.[0-9]+
+  releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:
   - feat
