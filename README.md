@@ -13,63 +13,54 @@ see [CHANGELOG.md](CHANGELOG.md)
 
 ### Usage
 * Create [config file](#config-file) `git-conventional-commits init`
-* Adjust config `git-conventional-commits.json` to your needs
+* Adjust config `git-conventional-commits.yaml` to your needs
 
 #### Commands
 ℹ add help parameter `-h` to commands to list all possible options
 ```
-  init [options]                               creates a config file template `git-conventional-commits.json`
+  init [options]                               creates a config file template `git-conventional-commits.yaml`
   version [options]                            determine version from conventional commits
   changelog [options]                          generate change log from conventional commits
   commit-msg-hook [options] <commit-msg-file>  check for conventional commit message format
 ```
 
 #### Config File
-Example `git-conventional-commits.json`
-```json
-{
-  "convention" : {
-    "commitTypes": [
-      "feat",
-      "fix",
-      "perf",
-      "refactor",
-      "style",
-      "test",
-      "build",
-      "ops",
-      "docs",
-      "merge"
-    ],
-    "commitScopes": [],
-    "releaseTagGlobPattern":  "v[0-9]*.[0-9]*.[0-9]*"
-  },
-
-  "changelog" : {
-    "commitTypes": [
-      "feat",
-      "fix",
-      "perf",
-      "merge"
-    ],
-    "includeInvalidCommits": true,
-    "commitScopes": [],
-    "commitIgnoreRegexPattern": "^WIP ",
-    "headlines": {
-      "feat": "Features",
-      "fix": "Bug Fixes",
-      "perf": "Performance Improvements",
-      "merge": "Merges",
-      "breakingChange": "BREAKING CHANGES"
-    },
-
-    "commitUrl": "https://github.com/ACCOUNT/REPOSITORY/commit/%commit%",
-    "commitRangeUrl": "https://github.com/ACCOUNT/REPOSITORY/compare/%from%...%to%?diff=split",
-    "issueRegexPattern": "#\\d+",
-    "issueUrl": "https://github.com/ACCOUNT/REPOSITORY/issues/%issue%"
-  }
-}
-
+Example `git-conventional-commits.yaml`
+```yaml
+---
+convention:
+  commitTypes:
+  - feat
+  - fix
+  - perf
+  - refactor
+  - style
+  - test
+  - build
+  - ops
+  - docs
+  - merge
+  commitScopes: []
+  releaseTagGlobPattern: v[0-9]+.[0-9]+.[0-9]+
+changelog:
+  commitTypes:
+  - feat
+  - fix
+  - perf
+  - merge
+  includeInvalidCommits: true
+  commitScopes: []
+  commitIgnoreRegexPattern: "^WIP "
+  headlines:
+    feat: Features
+    fix: Bug Fixes
+    perf: Performance Improvements
+    merge: Merges
+    breakingChange: BREAKING CHANGES
+  commitUrl: https://github.com/qoomon/git-conventional-commits/commit/%commit%
+  commitRangeUrl: https://github.com/qoomon/git-conventional-commits/compare/%from%...%to%?diff=split
+  issueRegexPattern: "#[0-9]+"
+  issueUrl: https://github.com/qoomon/git-conventional-commits/issues/%issue%
 
 ```
 * `convention`
