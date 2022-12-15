@@ -1,3 +1,9 @@
+## **2.3.1** <sub><sup>2022-12-14 ([5d29d9b...a75269d](https://github.com/qoomon/git-conventional-commits/compare/5d29d9b...a75269d?diff=split))</sup></sub>
+
+### Bug Fixes
+*  fix git command sytax for windows  ([a75269d](https://github.com/qoomon/git-conventional-commits/commit/a75269d))
+
+
 ## **2.3.0** <sub><sup>2022-11-06 ([d7e4124...15a031e](https://github.com/qoomon/git-conventional-commits/compare/d7e4124...15a031e?diff=split))</sup></sub>
 
 ### Features
