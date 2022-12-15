@@ -1,3 +1,9 @@
+## **2.4.0** <sub><sup>2022-12-15 ([e19dbd5...e19dbd5](https://github.com/qoomon/git-conventional-commits/compare/e19dbd5...e19dbd5?diff=split))</sup></sub>
+
+### Features
+* add yaml config support ([e19dbd5](https://github.com/qoomon/git-conventional-commits/commit/e19dbd5))
+
+
 ## **2.3.1** <sub><sup>2022-12-14 ([5d29d9b...a75269d](https://github.com/qoomon/git-conventional-commits/compare/5d29d9b...a75269d?diff=split))</sup></sub>
 
 ### Bug Fixes

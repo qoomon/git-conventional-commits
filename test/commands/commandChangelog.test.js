@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const temp = require("tmp-promise");
 const execAsync = require("../../lib/execAsync");
+const YAML = require('yaml')
 
 const commandChangelog = require("../../lib/commands/commandChangelog");
 
@@ -13,7 +14,7 @@ beforeEach(async () => {
     await execAsync("git init");
 
     const config = {}
-    fs.writeFileSync("git-conventional-commits.json", JSON.stringify(config), 'utf8');
+    fs.writeFileSync("git-conventional-commits.yaml", YAML.stringify(config), 'utf8');
 });
 
 const createSimpleChangelog = async (commitSubject, commitBody) => {
@@ -39,7 +40,7 @@ const createSimpleChangelog = async (commitSubject, commitBody) => {
 
     // WHEN
     await commandChangelog.handler({
-        config: "./git-conventional-commits.json",
+        config: "./git-conventional-commits.yaml",
         file: changelogFile,
     });
 
