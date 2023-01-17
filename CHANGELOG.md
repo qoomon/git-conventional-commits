@@ -1,3 +1,8 @@
+## **2.4.1** <sub><sup>2023-01-17 ([ea1c647...ea1c647](https://github.com/qoomon/git-conventional-commits/compare/ea1c647...ea1c647?diff=split))</sup></sub>
+
+### Bug Fixes
+* add missing default\.yaml ([ea1c647](https://github.com/qoomon/git-conventional-commits/commit/ea1c647))
+
 ## **2.4.0** <sub><sup>2022-12-15 ([e19dbd5...e19dbd5](https://github.com/qoomon/git-conventional-commits/compare/e19dbd5...e19dbd5?diff=split))</sup></sub>
 
 ### Features
