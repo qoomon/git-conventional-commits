@@ -1,3 +1,8 @@
+## **2.5.0** <sub><sup>2023-01-27 ([5d6f92f...5d6f92f](https://github.com/qoomon/git-conventional-commits/compare/5d6f92f...5d6f92f?diff=split))</sup></sub>
+
+### Features
+* init command add commit message hook ([5d6f92f](https://github.com/qoomon/git-conventional-commits/commit/5d6f92f))
+
 ## **2.4.1** <sub><sup>2023-01-17 ([ea1c647...ea1c647](https://github.com/qoomon/git-conventional-commits/compare/ea1c647...ea1c647?diff=split))</sup></sub>
 
 ### Bug Fixes
