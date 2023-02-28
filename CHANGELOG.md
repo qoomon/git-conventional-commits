@@ -2,7 +2,7 @@
 
 #### Features
 
-###### `changelog`
+##### &ensp;`changelog`
 * adjust changelog styling ([aafcc05](https://github.com/qoomon/git-conventional-commits/commit/aafcc05))
 
 <br>
@@ -82,7 +82,7 @@
 *  ignore pre-release version tags e.g. v1.2.3-SNAPSHOT or v1.2.3-rc1 ([df7be15](https://github.com/qoomon/git-conventional-commits/commit/df7be15))
 *  do not recalculate version, if version tag points on commit anchor ([8cd6c74](https://github.com/qoomon/git-conventional-commits/commit/8cd6c74))
 
-##### `changelog`
+#####  &ensp;`changelog`
 *  release date will be taken from commit date ([ed7cb3b](https://github.com/qoomon/git-conventional-commits/commit/ed7cb3b))
 
 <br>
