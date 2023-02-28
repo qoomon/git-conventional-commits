@@ -1,3 +1,9 @@
+## **2.5.2** <sub><sup>2023-02-28 ([15ea67b...15ea67b](https://github.com/qoomon/git-conventional-commits/compare/15ea67b...15ea67b?diff=split))</sup></sub>
+
+### Bug Fixes
+* fix missing new line for commit line ([15ea67b](https://github.com/qoomon/git-conventional-commits/commit/15ea67b))
+
+
 ## **2.5.0** <sub><sup>2023-01-27 ([5d6f92f...5d6f92f](https://github.com/qoomon/git-conventional-commits/compare/5d6f92f...5d6f92f?diff=split))</sup></sub>
 
 ### Features
