@@ -1,6 +1,6 @@
 ## **2.6.0**&emsp;<sub><sup>2023-02-28 ([aafcc05...aafcc05](https://github.com/qoomon/git-conventional-commits/compare/aafcc05...aafcc05?diff=split))</sup></sub>
 
-#### Features
+### Features
 
 ##### &ensp;`changelog`
 * adjust changelog styling ([aafcc05](https://github.com/qoomon/git-conventional-commits/commit/aafcc05))
