@@ -2,7 +2,7 @@
 
 #### Features
 
-##### `changelog`
+###### `changelog`
 * adjust changelog styling ([aafcc05](https://github.com/qoomon/git-conventional-commits/commit/aafcc05))
 
 <br>
