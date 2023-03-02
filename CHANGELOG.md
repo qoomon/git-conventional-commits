@@ -1,3 +1,10 @@
+## **2.6.3**&emsp;<sub><sup>2023-03-02 ([ad1d56c...a64d54f](https://github.com/qoomon/git-conventional-commits/compare/ad1d56c...a64d54f?diff=split))</sup></sub>
+
+### Bug Fixes
+* use full commit hashes for links ([a64d54f](https://github.com/qoomon/git-conventional-commits/commit/a64d54f))
+
+<br>
+
 ## **2.6.0**&emsp;<sub><sup>2023-02-28 ([aafcc05...aafcc05](https://github.com/qoomon/git-conventional-commits/compare/aafcc05...aafcc05?diff=split))</sup></sub>
 
 ### Features
