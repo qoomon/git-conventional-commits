@@ -58,7 +58,7 @@ test("commandChangelog - included commit", async () => {
 
     // THEN
     expect(changelogString).toMatch(
-        new RegExp(`Bug Fixes\\s+\\*\\s+${commitMessage}`, "g")
+        new RegExp(`Bug Fixes\\s+-\\s+${commitMessage}`, "g")
     );
 });
 
@@ -94,6 +94,6 @@ test("commandChangelog - included because breaking", async () => {
 
     // THEN
     expect(changelogString).toMatch(
-        new RegExp(`BREAKING CHANGES\\s+\\*\\s+${commitBodyMessage}`, "g")
+        new RegExp(`BREAKING CHANGES\\s+-\\s+${commitBodyMessage}`, "g")
     );
 });
