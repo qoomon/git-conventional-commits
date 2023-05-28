@@ -97,3 +97,21 @@ test("commandChangelog - included because breaking", async () => {
         new RegExp(`BREAKING CHANGES\\s+-\\s+${commitBodyMessage}`, "g")
     );
 });
+
+test("commandChangelog - ignored by regex pattern", async () => {
+    // GIVEN
+    const commitType = "fix";
+    const commitMessage = "Just a work in progress";
+    const commitSubject = `${commitType}: ${commitMessage}`;
+
+    const commitBody = "WIP I want to be ignored";
+
+    // WHEN
+    const changelogString = await createSimpleChangelog(
+        commitSubject,
+        commitBody
+    );
+
+    // THEN
+    expect(changelogString).toMatch(/no relevant changes/);
+});
