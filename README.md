@@ -155,6 +155,19 @@ The hook can be created either manually or using the [pre-commit framework](http
 * Push all changes `git push`
 * Build and upload artifacts
 
+#### Integration with existing repository
+
+If you have an old repo that you are changing into using conventional commits, you may need a starting point for the very first version.
+
+In particular if you never had any vx.x.x tags, or if you want the first release to be "clean".
+
+Therefore, you need to create a dummy version:
+
+* Tag commit with version `git tag -a -m'build(release): 0.0.1' 'v0.0.1'`
+* Push all changes `git push`
+
+Now `git-conventional-commits version` will use that version as the point in time to start looking for commits.
+
 ---
 
 ## Build/Release
