@@ -117,7 +117,7 @@ The hook can be created either manually or using the [pre-commit framework](http
     ```yaml
     repos:
     - repo: https://github.com/qoomon/git-conventional-commits
-      rev: <revision e.g. v2.1.0>
+      rev: <revision e.g. v2.6.5>
       hooks:
         - id: conventional-commits
     ```
