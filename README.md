@@ -8,12 +8,10 @@
 ### Changelog
 see [CHANGELOG.md](CHANGELOG.md)
 
-### Install
-`npm install --global git-conventional-commits`
-
 ### Usage
-* Create [config file](#config-file) `git-conventional-commits init`
+* Create [config file](#config-file) `npx git-conventional-commits init`
 * Adjust config `git-conventional-commits.yaml` to your needs
+* Run any [command](#commands)
 
 #### Commands
 ℹ add help parameter `-h` to commands to list all possible options
