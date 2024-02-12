@@ -137,7 +137,7 @@ The hook can be created either manually or using the [pre-commit framework](http
       # fix for windows systems
       PATH="/c/Program Files/nodejs:$HOME/AppData/Roaming/npm/:$PATH"
 
-      git-conventional-commits commit-msg-hook "$1"
+      npx git-conventional-commits commit-msg-hook "$1"
       ```
   * Add and commit `.git-hooks/commit-msg` to repository
   * ⚠️ Whenever you clone your repository with git hooks you need to enable git hooks once again
@@ -145,10 +145,10 @@ The hook can be created either manually or using the [pre-commit framework](http
 
 
 ### Release Workflow with `git-conventional-commits`
-* Determine version by `git-conventional-commits version`
+* Determine version by `npx git-conventional-commits version`
 * Update version in project files
   * Commit version bump `git commit -am'build(release): bump project version to <version>'`
-* Generate change log by `git-conventional-commits changelog --release  <version> --file 'CHANGELOG.md'`
+* Generate change log by `npx git-conventional-commits changelog --release  <version> --file 'CHANGELOG.md'`
   * Commit change log `git commit -am'docs(release): create <version> change log entry'`
 * Tag commit with version `git tag -a -m'build(release): <version>' '<version-prefix><version>'`
 * Push all changes `git push`
@@ -159,7 +159,7 @@ The hook can be created either manually or using the [pre-commit framework](http
 If you have an large existing repo with no release tags e.g. v1.0.0, or if you want the first changelog to be tidy, you need to create a release tag first.
 * Create release tag for specific commit`git tag -a -m'build(release): 0.0.0' 'v0.0.0'`
 * Push tag `git push origin v0.0.0`
-This way `git-conventional-commits` will use that the taged commit as the point in time to start looking for commits.
+This way `npx git-conventional-commits` will only considre commits based on the commit the release tag is pointing at.
 
 ---
 
