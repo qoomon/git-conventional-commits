@@ -9,10 +9,7 @@
 see [CHANGELOG.md](CHANGELOG.md)
 
 ### Usage
-* Create [config file](#config-file) `npx git-conventional-commits init`
-* Adjust config `git-conventional-commits.yaml` to your needs
-* Run any [command](#commands)
-
+`npx git-conventional-commits <command>`
 #### Commands
 ℹ add help parameter `-h` to commands to list all possible options
 ```
@@ -21,6 +18,10 @@ see [CHANGELOG.md](CHANGELOG.md)
   changelog [options]                          generate change log from conventional commits
   commit-msg-hook [options] <commit-msg-file>  check for conventional commit message format
 ```
+  
+#### First Usage
+* Run `npx git-conventional-commits init`
+* Adjust [config file](#config-file) `git-conventional-commits.yaml` to your needs
 
 #### Config File
 Example `git-conventional-commits.yaml`
