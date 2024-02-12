@@ -13,7 +13,7 @@ see [CHANGELOG.md](CHANGELOG.md)
 #### Commands
 ℹ add help parameter `-h` to commands to list all possible options
 ```
-  init [options]                               creates a config file template `git-conventional-commits.yaml`
+  init [options]                               create a config file template `git-conventional-commits.yaml`
   version [options]                            determine version from conventional commits
   changelog [options]                          generate change log from conventional commits
   commit-msg-hook [options] <commit-msg-file>  check for conventional commit message format
