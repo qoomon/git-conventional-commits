@@ -162,6 +162,10 @@ If you have an large existing repo with no release tags e.g. v1.0.0, or if you w
 This way `npx git-conventional-commits` will only considre commits based on the commit the release tag is pointing at.
 
 ---
+## Projects Using git-conventional-commits
+- https://github.com/Blazity/next-enterprise
+
+---
 
 ## Build/Release
 * `npm install`
