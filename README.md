@@ -1,9 +1,9 @@
 # Git Conventional Commits [![Sparkline](https://stars.medv.io/qoomon/git-conventional-commits.svg)](https://stars.medv.io/qoomon/git-conventional-commits)
 
-
 [![npm](https://img.shields.io/npm/v/git-conventional-commits)](https://www.npmjs.com/package/git-conventional-commits)
 
-**ℹ Have a look at [Git Commit Conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
+> [!TIP]
+> Have a look at **[Git Commit Conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
 
 ### Changelog
 see [CHANGELOG.md](CHANGELOG.md)
@@ -140,8 +140,9 @@ The hook can be created either manually or using the [pre-commit framework](http
       npx git-conventional-commits commit-msg-hook "$1"
       ```
   * Add and commit `.git-hooks/commit-msg` to repository
-  * ⚠️ Whenever you clone your repository with git hooks you need to enable git hooks once again
-    * `git config core.hooksPath .git-hooks`
+> [!IMPORTANT]
+> Whenever you clone your repository with git hooks you need to enable git hooks once again
+> <br>`git config core.hooksPath .git-hooks`
 
 
 ### Release Workflow with `git-conventional-commits`
