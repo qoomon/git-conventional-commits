@@ -5,9 +5,6 @@
 > [!TIP]
 > Have a look at **[Git Commit Conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
 
-> **alert#9a6700;Warning**
-> This is a warning
-
 ### Changelog
 see [CHANGELOG.md](CHANGELOG.md)
 
