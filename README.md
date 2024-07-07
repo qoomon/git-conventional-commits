@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/git-conventional-commits)](https://www.npmjs.com/package/git-conventional-commits)
 
 > [!TIP]
-> Also have a look at **[Git Commit Conventions Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
+> Also have a look at **[Git Conventional Commits Cheat Sheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)**
 
 ### Changelog
 see [CHANGELOG.md](CHANGELOG.md)
