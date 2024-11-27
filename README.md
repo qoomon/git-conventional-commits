@@ -41,6 +41,10 @@ convention:
   - merge
   commitScopes: []
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
+  msgRegex: /^(?<type>\w+)(?:\((?<scope>[^()]+)\))?(?<breaking>!)?:\s*(?<description>.+)/i
+  msgMergeRegexList: 
+    - /^Merge (?<description>.+)/i
+    - /^Merged in (?<description>.+)/i
 changelog:
   commitTypes:
   - feat
