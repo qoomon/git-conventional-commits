@@ -11,8 +11,8 @@ test("config - message RegEx", async () => {
     const invalidMsgRegex = /(?:\((?<scope>[^()]+)\))?(?<breaking>!)?:\s*(?<description>.+)/i;
 
     // THEN
-    expect(config.hasMandatoryCaptureGroups(validMsgRegex, requiredCaptureGroups)).toBe(true);
-    expect(config.hasMandatoryCaptureGroups(invalidMsgRegex, requiredCaptureGroups)).toBe(false);
+    expect(config.hasAllCapturingGroups(validMsgRegex, requiredCaptureGroups)).toBe(true);
+    expect(config.hasAllCapturingGroups(invalidMsgRegex, requiredCaptureGroups)).toBe(false);
 });
 
 test("config - merge RegEx", async () => {
@@ -25,8 +25,8 @@ test("config - merge RegEx", async () => {
     const invalidMsgRegex = /^Merge (?<type>.+)/i;
 
     // THEN
-    expect(config.hasMandatoryCaptureGroups(validMsgRegex, requiredCaptureGroups)).toBe(true);
-    expect(config.hasMandatoryCaptureGroups(invalidMsgRegex, requiredCaptureGroups)).toBe(false); 
+    expect(config.hasAllCapturingGroups(validMsgRegex, requiredCaptureGroups)).toBe(true);
+    expect(config.hasAllCapturingGroups(invalidMsgRegex, requiredCaptureGroups)).toBe(false);
 });
 
 
