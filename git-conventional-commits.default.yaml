@@ -1,9 +1,9 @@
 ---
 convention:
   commitTypes:
-  - feat     # Commits, that adds or remove a new feature to the API or UI
-  - fix      # Commits, that fixes a API or UI bug of a preceded feat commit
-  - refactor # Commits, that rewrite/restructure your code, however does not change any API or UI behaviour
+  - feat     # Commits, that add or remove a new feature to the API or UI
+  - fix      # Commits, that fix a API or UI bug of a preceded feat commit
+  - refactor # Commits, that rewrite/restructure your code, however do not change any API or UI behaviour
   - perf     # Commits are special `refactor` commits, that improve performance
   - style    # Commits, that do not affect the meaning (white-space, formatting, missing semi-colons, etc)
   - test     # Commits, that add missing tests or correcting existing tests
