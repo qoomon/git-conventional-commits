@@ -28,6 +28,7 @@ Example `git-conventional-commits.yaml`
 ```yaml
 ---
 convention:
+  # commitMessageRegexPattern: ^(?<type>\w+)(?:\((?<scope>[^()]+)\))?(?<breaking>!)?:\s*(?<description>.+)
   commitTypes:
   - feat     # Commits, that add or remove a new feature to the API or UI
   - fix      # Commits, that fix a API or UI bug of a preceded feat commit
@@ -43,7 +44,6 @@ convention:
   - merge
   commitScopes: []
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
-  commitMessageRegexPattern: ^(?<type>\w+)(?:\((?<scope>[^()]+)\))?(?<breaking>!)?:\s*(?<description>.+)
 changelog:
   commitTypes:
   - feat
