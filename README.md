@@ -66,6 +66,9 @@ changelog:
 
 ```
 * `convention`
+  * `commitMessageRegexPattern` custom regex pattern for commit messages
+    * the default regex pattern for Conventional Commit format is `^(?<type>\w+)(?:\((?<scope>[^()]+)\))?(?<breaking>!)?:\s*(?<description>.+)`
+    * need to use add to this pattern (beginning or end) if you want to keep following the Conventional Commit format
   * `commitTypes` an array of expected commit types
     * show warnings for unexpected types
     * if not set or empty commit type validation is disabled
@@ -77,8 +80,6 @@ changelog:
   * `releaseTagGlobPattern` glob pattern to filter for release tags
     * release tags must contain semantic version (`[0-9]+\.[0-9]+\.[0-9]+`)
     * default `*`  
-  * `issueRegexPattern` regex pattern to find issue IDs
-    * e.g. Jira issue pattern `[A-Z]{3,}-\\d+`
  
 * `changelog` 
   * `commitTypes` filter commits by type
@@ -107,6 +108,8 @@ changelog:
     * `%issue%` issue id placeholder
     * eg `https://jira.example.org/browse/%issue%`
     * if not set or empty link generation is disabled
+  * `issueRegexPattern` regex pattern to find issue IDs
+    * e.g. Jira issue pattern `[A-Z]{3,}-\\d+`
  
 
 ### Automatically Validate Commit Message Convention before Commit
