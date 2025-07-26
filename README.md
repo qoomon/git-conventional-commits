@@ -78,6 +78,9 @@ changelog:
     * default `*`  
   * `issueRegexPattern` regex pattern to find issue IDs
     * e.g. Jira issue pattern `[A-Z]{3,}-\\d+`
+  * `commitMessageRegexPattern` custom regex pattern for commit messages
+    * the default regex pattern for Conventional Commit format is `^(?<type>\w+)(?:\((?<scope>[^()]+)\))?(?<breaking>!)?:\s*(?<description>.+)`
+    * need to use add to this pattern (beginning or end) if you want to keep following the Conventional Commit format
  
 * `changelog` 
   * `commitTypes` filter commits by type
