@@ -218,6 +218,40 @@ test("commandChangelog - fixup! commit is kept as invalid when referenced commit
     expect(changelogString).not.toMatch(/no relevant changes/);
 });
 
+test("commandChangelog - fixup! commit with partial subject is ignored when prefix matches a commit in range", async () => {
+    // GIVEN
+    const changelogFile = "CHANGELOG.md";
+
+    // add init commit
+    fs.writeFileSync("text.txt", "0");
+    await execAsync("git add text.txt");
+    await execAsync("git commit -a -m init");
+
+    // add tag
+    const givenVersionTag = "v1.0.0";
+    await execAsync(`git tag -a -m ${givenVersionTag} ${givenVersionTag}`);
+
+    // add a conventional commit
+    fs.writeFileSync("text.txt", "1");
+    await execAsync('git commit -a -m "feat: add new feature"');
+
+    // add a fixup commit with only a partial subject (prefix match, like git autosquash)
+    fs.writeFileSync("text.txt", "2");
+    await execAsync('git commit -a -m "fixup! feat: add"');
+
+    // WHEN
+    await commandChangelog.handler({
+        config: "./git-conventional-commits.yaml",
+        file: changelogFile,
+    });
+
+    const changelogString = fs.readFileSync(changelogFile).toString();
+
+    // THEN - fixup commit should be filtered because "feat: add" is a prefix of "feat: add new feature"
+    expect(changelogString).toMatch(/add new feature/);
+    expect(changelogString).not.toMatch(/fixup!/);
+});
+
 test("commandChangelog - multiple fixup! commits referencing the same commit are all ignored", async () => {
     // GIVEN
     const changelogFile = "CHANGELOG.md";
