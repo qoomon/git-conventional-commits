@@ -217,3 +217,40 @@ test("commandChangelog - fixup! commit is kept as invalid when referenced commit
     // With includeInvalidCommits=true (default), it should appear in changelog
     expect(changelogString).not.toMatch(/no relevant changes/);
 });
+
+test("commandChangelog - multiple fixup! commits referencing the same commit are all ignored", async () => {
+    // GIVEN
+    const changelogFile = "CHANGELOG.md";
+
+    // add init commit
+    fs.writeFileSync("text.txt", "0");
+    await execAsync("git add text.txt");
+    await execAsync("git commit -a -m init");
+
+    // add tag
+    const givenVersionTag = "v1.0.0";
+    await execAsync(`git tag -a -m ${givenVersionTag} ${givenVersionTag}`);
+
+    // add a conventional commit
+    fs.writeFileSync("text.txt", "1");
+    await execAsync('git commit -a -m "feat: add new feature"');
+
+    // add multiple fixup commits referencing the same conventional commit
+    fs.writeFileSync("text.txt", "2");
+    await execAsync('git commit -a -m "fixup! feat: add new feature"');
+
+    fs.writeFileSync("text.txt", "3");
+    await execAsync('git commit -a -m "fixup! feat: add new feature"');
+
+    // WHEN
+    await commandChangelog.handler({
+        config: "./git-conventional-commits.yaml",
+        file: changelogFile,
+    });
+
+    const changelogString = fs.readFileSync(changelogFile).toString();
+
+    // THEN - only the original commit should appear, fixup commits are filtered
+    expect(changelogString).toMatch(/add new feature/);
+    expect(changelogString).not.toMatch(/fixup!/);
+});
