@@ -1,6 +1,28 @@
 const Config = require('../lib/commands/config');
 const CommitConvention = require('../lib/gitCommitConvention');
 
+describe('getFixupSquashReferenceSubject', () => {
+    test('returns undefined for regular commit', () => {
+        expect(CommitConvention.getFixupSquashReferenceSubject('feat: add feature')).toBeUndefined();
+    });
+
+    test('returns referenced subject for fixup! commit', () => {
+        expect(CommitConvention.getFixupSquashReferenceSubject('fixup! feat: add feature')).toBe('feat: add feature');
+    });
+
+    test('returns referenced subject for squash! commit', () => {
+        expect(CommitConvention.getFixupSquashReferenceSubject('squash! feat: add feature')).toBe('feat: add feature');
+    });
+
+    test('returns undefined for commit starting with fixup without exclamation', () => {
+        expect(CommitConvention.getFixupSquashReferenceSubject('fixup something')).toBeUndefined();
+    });
+
+    test('returns undefined for commit starting with squash without exclamation', () => {
+        expect(CommitConvention.getFixupSquashReferenceSubject('squash something')).toBeUndefined();
+    });
+});
+
 test('parseCommit', async () => {
 
     // GIVEN

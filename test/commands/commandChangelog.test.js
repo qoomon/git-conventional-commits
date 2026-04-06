@@ -115,3 +115,105 @@ test("commandChangelog - ignored by regex pattern", async () => {
     // THEN
     expect(changelogString).toMatch(/no relevant changes/);
 });
+
+test("commandChangelog - fixup! commit is ignored when referenced commit is in range", async () => {
+    // GIVEN
+    const changelogFile = "CHANGELOG.md";
+
+    // add init commit
+    fs.writeFileSync("text.txt", "0");
+    await execAsync("git add text.txt");
+    await execAsync("git commit -a -m init");
+
+    // add tag
+    const givenVersionTag = "v1.0.0";
+    await execAsync(`git tag -a -m ${givenVersionTag} ${givenVersionTag}`);
+
+    // add a conventional commit
+    fs.writeFileSync("text.txt", "1");
+    await execAsync('git commit -a -m "feat: add new feature"');
+
+    // add a fixup commit referencing the conventional commit
+    fs.writeFileSync("text.txt", "2");
+    await execAsync('git commit -a -m "fixup! feat: add new feature"');
+
+    // WHEN
+    await commandChangelog.handler({
+        config: "./git-conventional-commits.yaml",
+        file: changelogFile,
+    });
+
+    const changelogString = fs.readFileSync(changelogFile).toString();
+
+    // THEN - only the original commit should appear, not the fixup
+    expect(changelogString).toMatch(/add new feature/);
+    expect(changelogString).not.toMatch(/fixup!/);
+});
+
+test("commandChangelog - squash! commit is ignored when referenced commit is in range", async () => {
+    // GIVEN
+    const changelogFile = "CHANGELOG.md";
+
+    // add init commit
+    fs.writeFileSync("text.txt", "0");
+    await execAsync("git add text.txt");
+    await execAsync("git commit -a -m init");
+
+    // add tag
+    const givenVersionTag = "v1.0.0";
+    await execAsync(`git tag -a -m ${givenVersionTag} ${givenVersionTag}`);
+
+    // add a conventional commit
+    fs.writeFileSync("text.txt", "1");
+    await execAsync('git commit -a -m "fix: resolve bug"');
+
+    // add a squash commit referencing the conventional commit
+    fs.writeFileSync("text.txt", "2");
+    await execAsync('git commit -a -m "squash! fix: resolve bug"');
+
+    // WHEN
+    await commandChangelog.handler({
+        config: "./git-conventional-commits.yaml",
+        file: changelogFile,
+    });
+
+    const changelogString = fs.readFileSync(changelogFile).toString();
+
+    // THEN - only the original commit should appear, not the squash
+    expect(changelogString).toMatch(/resolve bug/);
+    expect(changelogString).not.toMatch(/squash!/);
+});
+
+test("commandChangelog - fixup! commit is kept as invalid when referenced commit is not in range", async () => {
+    // GIVEN
+    const changelogFile = "CHANGELOG.md";
+
+    // add init commit
+    fs.writeFileSync("text.txt", "0");
+    await execAsync("git add text.txt");
+    await execAsync("git commit -a -m init");
+
+    // add a conventional commit that will be before the tag
+    fs.writeFileSync("text.txt", "1");
+    await execAsync('git commit -a -m "feat: old feature"');
+
+    // add tag - so "feat: old feature" is in a previous release
+    const givenVersionTag = "v1.0.0";
+    await execAsync(`git tag -a -m ${givenVersionTag} ${givenVersionTag}`);
+
+    // add a fixup commit referencing a commit NOT in the current range
+    fs.writeFileSync("text.txt", "2");
+    await execAsync('git commit -a -m "fixup! feat: old feature"');
+
+    // WHEN
+    await commandChangelog.handler({
+        config: "./git-conventional-commits.yaml",
+        file: changelogFile,
+    });
+
+    const changelogString = fs.readFileSync(changelogFile).toString();
+
+    // THEN - fixup commit is kept (treated as invalid) since referenced commit is not in range
+    // With includeInvalidCommits=true (default), it should appear in changelog
+    expect(changelogString).not.toMatch(/no relevant changes/);
+});
