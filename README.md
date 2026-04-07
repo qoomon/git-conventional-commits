@@ -164,7 +164,7 @@ The hook can be created either manually or using the [pre-commit framework](http
 
 ### Versioning rules
 
-> [!INFO]
+> [!NOTE]
 > A **breaking change** is defined by a commit message that contains `!` in the subject, or `BREAKING CHANGE`/`BREAKING CHANGES` in the body.
 > A **feature** is defined by a commit message that contains one of the `featureCommitTypes` (by default: `[feat]`).
 > Anything else will become a **patch** version update.
