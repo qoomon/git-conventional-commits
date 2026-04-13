@@ -33,8 +33,8 @@ Example `git-conventional-commits.yaml`
 convention:
   # commitMessageRegexPattern: ^(?<type>\w+)(?:\((?<scope>[^()]+)\))?(?<breaking>!)?:\s*(?<description>.+)
   commitTypes:
-  - feat     # Commits that add or remove a feature
-  - fix      # Commits that fix a bug of a previous feat commit
+  - feat     # Commits that add, adjust or remove a feature to/of/from the API or UI
+  - fix      # Commits that fix a bug of a preceded `feat` commit
   - refactor # Commits that rewrite/restructure your code, however do not change any behaviour
   - perf     # Commits that are special `refactor` commits or that improve performance
   - style    # Commits that do not affect the meaning (white-space, formatting, missing semicolons, etc.)
