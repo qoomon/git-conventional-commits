@@ -1,4 +1,4 @@
-# Git Conventional Commits [![starline](https://raw.githubusercontent.com/qoomon/qoomon/refs/heads/main/starlines/qoomon/git-conventional-commits/starline.svg)
+# Git Conventional Commits [![starline](https://github.com/qoomon/starlines)](https://raw.githubusercontent.com/qoomon/qoomon/refs/heads/main/starlines/qoomon/git-conventional-commits/starline.svg)
 
 [![npm](https://img.shields.io/npm/v/git-conventional-commits)](https://www.npmjs.com/package/git-conventional-commits)
 
