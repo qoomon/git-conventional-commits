@@ -161,6 +161,13 @@ The hook can be created either manually or using the [pre-commit framework](http
 * The latest release tag is found via `git describe --tags --match=<glob> --no-abbrev`, using the `releaseTagGlobPattern`.
 * Pre-release tags are excluded automatically by adding `--exclude=<glob>-*`
 * If HEAD points exactly at the last release tag commit, it will look for the previous release tag (HEAD~1).
+* If the `--commit` anchor points exactly at a pre-release tag (e.g. `v6.0.0-next.2`), that tag is used as the changelog boundary, so only commits made since the previous tag (release or pre-release) are included.
+
+#### Changelog for a specific pre-release
+To generate a changelog containing only the commits added since a specific pre-release tag, use `--commit` to anchor on that tag and `--release` to name the changelog entry, e.g.
+```
+npx git-conventional-commits changelog --commit v6.0.0-next.2 --release v6.0.0-next.3
+```
 
 ### Versioning rules
 
