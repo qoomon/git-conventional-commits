@@ -98,7 +98,7 @@ test("commandChangelog - included because breaking", async () => {
     );
 });
 
-test("commandChangelog - pre-release tag as commit anchor", async () => {
+test("commandChangelog - base anchor set to pre-release tag", async () => {
     // GIVEN
     const changelogFile = "CHANGELOG.md";
 
@@ -119,13 +119,14 @@ test("commandChangelog - pre-release tag as commit anchor", async () => {
     await commandChangelog.handler({
         config: "./git-conventional-commits.yaml",
         commit: "v2.0.0-next.2",
+        base: "v2.0.0-next.1",
         release: "v2.0.0-next.2",
         file: changelogFile,
     });
     const changelogString = fs.readFileSync(changelogFile).toString();
 
     // THEN
-    // only the commit made after the previous pre-release tag should be included
+    // only the commit made after the explicit base anchor should be included
     expect(changelogString).toMatch(/add feature B/);
     expect(changelogString).not.toMatch(/add feature A/);
 });
