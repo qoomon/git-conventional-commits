@@ -98,6 +98,39 @@ test("commandChangelog - included because breaking", async () => {
     );
 });
 
+test("commandChangelog - base anchor set to pre-release tag", async () => {
+    // GIVEN
+    const changelogFile = "CHANGELOG.md";
+
+    fs.writeFileSync("text.txt", "0");
+    await execAsync("git add text.txt");
+    await execAsync("git commit -a -m init");
+    await execAsync("git tag -a -m v1.0.0 v1.0.0");
+
+    fs.writeFileSync("text.txt", "1");
+    await execAsync('git commit -a -m "feat: add feature A"');
+    await execAsync("git tag -a -m v2.0.0-next.1 v2.0.0-next.1");
+
+    fs.writeFileSync("text.txt", "2");
+    await execAsync('git commit -a -m "feat: add feature B"');
+    await execAsync("git tag -a -m v2.0.0-next.2 v2.0.0-next.2");
+
+    // WHEN
+    await commandChangelog.handler({
+        config: "./git-conventional-commits.yaml",
+        commit: "v2.0.0-next.2",
+        base: "v2.0.0-next.1",
+        release: "v2.0.0-next.2",
+        file: changelogFile,
+    });
+    const changelogString = fs.readFileSync(changelogFile).toString();
+
+    // THEN
+    // only the commit made after the explicit base anchor should be included
+    expect(changelogString).toMatch(/add feature B/);
+    expect(changelogString).not.toMatch(/add feature A/);
+});
+
 test("commandChangelog - ignored by regex pattern", async () => {
     // GIVEN
     const commitType = "fix";
