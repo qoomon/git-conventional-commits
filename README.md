@@ -160,7 +160,27 @@ The hook can be created either manually or using the [pre-commit framework](http
 ### Tag discovery
 * The latest release tag is found via `git describe --tags --match=<glob> --no-abbrev`, using the `releaseTagGlobPattern`.
 * Pre-release tags are excluded automatically by adding `--exclude=<glob>-*`
-* If HEAD points exactly at the last release tag commit, it will look for the previous release tag (HEAD~1).
+* When generating a changelog without `--base`, if the end commit points exactly at the last release tag commit, it will look for the previous release tag.
+
+### Changelog ranges
+
+* `--commit <ref>` sets the inclusive end of the changelog range (default: `HEAD`).
+* `--base <ref>` sets the exclusive start of the range. Both options accept a tag, branch, or commit hash.
+* Without `--base`, the start is the last full release tag reachable from the end commit, following the tag discovery rules above.
+* With `--base`, the range is exactly `<base>..<commit>`. Pre-release tags are accepted, and equal base/end commits produce an entry containing `no relevant changes`.
+* `--release <version>` sets the release heading. If omitted, the version is inferred from the last full release tag and all commits since that tag, independently of `--base`. Use `--release` to specify a pre-release version.
+
+Generate the next pre-release changelog from an existing pre-release tag through `HEAD`:
+
+```sh
+npx git-conventional-commits changelog --base v2.7.2-next.1 --release 2.7.2-next.2
+```
+
+To limit the end as well, add `--commit`:
+
+```sh
+npx git-conventional-commits changelog --base v2.7.2-next.1 --commit v2.7.2-next.2 --release 2.7.2-next.2
+```
 
 ### Versioning rules
 
@@ -204,4 +224,3 @@ This way `npx git-conventional-commits` will only consider commits based on the 
 * `npm test`
 * `npm login`
 * `npm publish`
-
